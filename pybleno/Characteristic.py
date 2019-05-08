@@ -44,11 +44,11 @@ class Characteristic(dict):
         self.on('indicate', self.onIndicate)
   
     def onReadRequest(self, offset, callback):
-        callback(RESULT_UNLIKELY_ERROR, None);
+        callback(self.RESULT_UNLIKELY_ERROR, None);
         pass
 
     def onWriteRequest(self, data, offset, withoutResponse, callback):
-        callback(RESULT_UNLIKELY_ERROR);
+        callback(self.RESULT_UNLIKELY_ERROR);
         pass
 
     def onSubscribe(self, maxValueSize, updateValueCallback):
